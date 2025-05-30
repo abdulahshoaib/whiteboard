@@ -67,8 +67,6 @@ body{
 }
 
 canvas{
-  width: 1810px;
-  height: 660px;
   background: black;
   border: 0.1rem outset #8A784E;
   cursor: cell;

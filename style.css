@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: inter;
+    background: #f0f0f0;
+}
+
+#toolbar{
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+canvas{
+    border: 1px solid #ccc;
+    background: white;
+    cursor: crosshair;
+}

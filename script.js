@@ -9,6 +9,23 @@ function saveState() {
     undoStack.push(canvas.toDataURL());
 }
 
+function setTool(tool) {
+    currentTool = tool;
+}
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function saveImage() {
+    const dataURL = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+
+    link.href = dataURL;
+    link.download = "whiteboard.png";
+    link.click();
+}
+
 function getMousePos(e) {
     const rect = canvas.getBoundingClientRect();
     const scaleX = canvas.width / rect.width;
@@ -35,11 +52,33 @@ function undo() {
 
 // shortcut listeners
 document.addEventListener("keydown", (e) => {
-    if (e.ctrlKey && e.key === 'z') {
+    if (e.key === "u") {
         if (undoStack.length === 0) // last undo
             clearCanvas();
         else
             undo();
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "p")
+        setTool("pen");
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "e")
+        setTool("eraser");
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey && e.key === "c")
+        clearCanvas();
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey && e.key === "s") {
+        e.preventDefault();
+        saveImage();
     }
 });
 
@@ -76,20 +115,3 @@ canvas.addEventListener("mouseup", () => {
 canvas.addEventListener("mouseleave", () => {
     isDrawing = false;
 });
-
-function setTool(tool) {
-    currentTool = tool;
-}
-
-function clearCanvas() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-function saveImage() {
-    const dataURL = canvas.toDataURL("image/png");
-    const link = document.createElement("a");
-
-    link.href = dataURL;
-    link.download = "my_whiteboard.png";
-    link.click();
-}

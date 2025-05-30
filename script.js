@@ -96,8 +96,8 @@ canvas.addEventListener("mousemove", (e) => {
     const pos = getMousePos(e);
 
     if (currentTool === "pen") {
-        ctx.strokeStyle = "white";
-        ctx.lineWidth = 0.25;
+        ctx.strokeStyle = "#3B3B1A";
+        ctx.lineWidth = 0.21;
     } else if (currentTool === "eraser") {
         ctx.strokeStyle = "black";
         ctx.lineWidth = 20;

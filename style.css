@@ -60,5 +60,6 @@ body{
 
 canvas{
     background: black;
-    cursor: crosshair;
+    border: 0.1rem outset #8A784E;
+    cursor: cell;
 }

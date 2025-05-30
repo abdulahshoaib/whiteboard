@@ -1,8 +1,15 @@
+@font-face {
+    font-family: "VictorMonoNF";
+    src: url("./fonts/VictorMonoNFMNerdFont-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
     margin: 0;
     display: flex;
     flex-direction: column;
-    font-family: inter;
+    font-family: "VictorMonoNF", monospace;
     background: black;
 }
 
@@ -13,14 +20,22 @@ body{
     justify-content: center;
 }
 
+#instructions{
+    text-align: center;
+    max-width:500px;
+    color: #AEC8A4;
+    border: medium dashed #8A784E;
+    padding: 10px;
+    margin: 30px auto;
+}
+
 .button-54 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "VictorMonoNF", monospace;
   font-size: 16px;
   letter-spacing: 2px;
   text-decoration: none;
-  text-transform: uppercase;
-  color: #5A5B5C;
-  background-color: #A9A9A9;
+  color: #3B3B1A;
+  background-color: #8A784E;
   cursor: pointer;
   border: 3px solid;
   padding: 0.25em 0.5em;

@@ -7,12 +7,12 @@ I made my own whiteboard app to take notes using vim motions coz couldn't find a
 
 ## Motions
 
-p -> pen
-e -> eraser
-u -> undo
+p -> pen<br>
+e -> eraser<br>
+u -> undo<br>
 
-C-s -> Save as image
-C-c -> Clear whiteboard
+C-s -> Save as image<br>
+C-c -> Clear whiteboard<br>
 
 ## Features
 

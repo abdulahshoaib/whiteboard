@@ -1,6 +1,6 @@
-# Whiteboard
+# Wh!teboard
 
-I made my own whiteboard app to take notes using vim motions coz couldn't find any online
+I made my own wh!teboard app to take notes using vim motions coz couldn't find any online
 
 ![Batman](./batman.png)
 > ignore my bad drawing was drawing this using my mouse
@@ -12,7 +12,7 @@ e -> eraser<br>
 u -> undo<br>
 
 C-s -> Save as image<br>
-C-c -> Clear whiteboard<br>
+C-c -> Clear wh!teboard<br>
 
 ## Features
 

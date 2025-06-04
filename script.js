@@ -3,10 +3,15 @@ const ctx = canvas.getContext("2d");
 
 let isDrawing = false;
 let currentTool = "pen";
+let penColor = "#3B3B1A"
 const undoStack = [];
 
 function saveState() {
     undoStack.push(canvas.toDataURL());
+}
+
+function setColor(color){
+    penColor = color;
 }
 
 function setTool(tool) {
@@ -96,7 +101,7 @@ canvas.addEventListener("mousemove", (e) => {
     const pos = getMousePos(e);
 
     if (currentTool === "pen") {
-        ctx.strokeStyle = "#3B3B1A";
+        ctx.strokeStyle = penColor;
         ctx.lineWidth = 0.21;
     } else if (currentTool === "eraser") {
         ctx.strokeStyle = "black";

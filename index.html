@@ -13,16 +13,32 @@
                 <button class="button-54" role="button" onclick="setTool('eraser')">Eraser (e)</button>
                 <button class="button-54" role="button" onclick="clearCanvas()">Clear Canvas (C-c)</button>
                 <button class="button-54" role="button" onclick="saveImage()">Save Whiteboard (C-s)</button>
+
+                <select id="color-select">
+                      <button>
+                        <selectedcontent></selectedcontent>
+                      </button>
+
+                      <option value="">Select a pen color</option>
+                      <option value="currant">
+                        <span class="option-label">Currant</span>
+                      </option>
+                      <option value="Chartreuse">
+                        <span class="option-label">Chartreuse</span>
+                      </option>
+                      <option value="emerald">
+                        <span class="option-label">Emerald</span>
+                      </option>
+                      <option value="amber">
+                        <span class="option-label">Amber</span>
+                      </option>
+                      <option value="cyan">
+                       <span class="option-label">Cyan</span>
+                      </option>
+                    </select>
+
+                </div>
             </div>
-            <div id="instructions">
-                Use the shortcuts: <br>
-                (Ctrl+S) -> save the Whiteboard<br>
-                (Ctrl+C) -> clear the Whiteboard<br>
-                (u) -> undo
-                (p) -> pen
-                (e) -> eraser
-            </div>
-        </div>
             <canvas id="whiteboard" width="1810" height="660"></canvas>
         <script src="script.js"></script>
     </body>

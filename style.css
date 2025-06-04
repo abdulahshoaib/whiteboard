@@ -13,6 +13,18 @@ body{
     background: black;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8A784E;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
 #top{
   display: flex;
   justify-content: center;
@@ -29,12 +41,62 @@ body{
   padding: 20px;
 }
 
-#instructions{
-  text-align: left;
-  max-width: 400px;
-  color: #AEC8A4;
-  border: medium dashed #8A784E;
-  padding: 20px;
+select{
+    justify-content: left;
+    border: 0.1rem solid #3B3B1A;
+    color: #8A784E;
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+  color: ;
+}
+
+select:hover{
+  background: #191a19;
+}
+
+select::picker-icon {
+  color: #8A784E;
+  transition: 0.6s rotate;
+}
+
+select:open::picker-icon {
+  rotate: 180deg;
+}
+
+option {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+
+  border: 0.1em solid #8A784E;
+  background: black;
+  color: #8A784E;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+option:first-of-type {
+  border-radius: 8px 8px 0 0;
+}
+
+option:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+
+option:not(option:last-of-type) {
+  border-bottom: none;
+}
+
+option:nth-of-type(odd) {
+  background: black;
+}
+
+option:hover,
+option:focus {
+  background: #57043e;
 }
 
 .button-54 {

@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang=en>
-    <head>
-        <meta name="whiteboard" content="whiteboard app">
-        <title>Whiteboard</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
 
-    <body>
-        <div id="top">
-            <div id="toolbar">
-                <button class="button-54" role="button" onclick="setTool('pen')">Pen (p)</button>
-                <button class="button-54" role="button" onclick="setTool('eraser')">Eraser (e)</button>
-                <button class="button-54" role="button" onclick="clearCanvas()">Clear Canvas (C-c)</button>
-                <button class="button-54" role="button" onclick="saveImage()">Save Whiteboard (C-s)</button>
+<head>
+    <meta name="whiteboard" content="whiteboard app">
+    <title>Whiteboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-                <select id="color-select">
-                      <button>
-                        <selectedcontent></selectedcontent>
-                      </button>
+<body>
+    <div id="top">
+        <div id="toolbar">
+            <button class="button-54" role="button" onclick="setTool('pen')">Pen (p)</button>
+            <button class="button-54" role="button" onclick="setTool('eraser')">Eraser (e)</button>
+            <button class="button-54" role="button" onclick="clearCanvas()">Clear Canvas (C-c)</button>
+            <button class="button-54" role="button" onclick="saveImage()">Save Whiteboard (C-s)</button>
 
-                      <option value="">Select a pen color</option>
-                      <option value="currant">
-                        <span class="option-label">Currant</span>
-                      </option>
-                      <option value="Chartreuse">
-                        <span class="option-label">Chartreuse</span>
-                      </option>
-                      <option value="emerald">
-                        <span class="option-label">Emerald</span>
-                      </option>
-                      <option value="amber">
-                        <span class="option-label">Amber</span>
-                      </option>
-                      <option value="cyan">
-                       <span class="option-label">Cyan</span>
-                      </option>
-                    </select>
+            <select id="color-select" onchange="setColor()">
 
-                </div>
-            </div>
-            <canvas id="whiteboard" width="1810" height="660"></canvas>
-        <script src="script.js"></script>
-    </body>
+                <option value="">Select a pen color</option>
+                <option value="brow">
+                    <span class="option-label">Brown</span>
+                </option>
+                <option value="currant">
+                    <span class="option-label">Currant</span>
+                </option>
+                <option value="plum">
+                    <span class="option-label">Plum</span>
+                </option>
+                <option value="chartreuse">
+                    <span class="option-label">Chartreuse</span>
+                </option>
+                <option value="emerald">
+                    <span class="option-label">Emerald</span>
+                </option>
+                <option value="amber">
+                    <span class="option-label">Amber</span>
+                </option>
+                <option value="cyan">
+                    <span class="option-label">Cyan</span>
+                </option>
+            </select>
+
+        </div>
+    </div>
+    <canvas id="whiteboard" width="1810" height="660"></canvas>
+    <script src="script.js"></script>
+</body>
+
 </html>

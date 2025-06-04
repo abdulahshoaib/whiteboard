@@ -10,8 +10,22 @@ function saveState() {
     undoStack.push(canvas.toDataURL());
 }
 
-function setColor(color){
-    penColor = color;
+function setColor() {
+    var selectedColor = document.getElementById("color-select").value;
+    if (selectedColor === "brown")
+        penColor = "#8a784e";
+    if (selectedColor === "currant")
+        penColor = "#ad3d3c";
+    if (selectedColor ===  "plum")
+        penColor = "#8e4585";
+    if (selectedColor === "chartreuse")
+        penColor = "#dfff00";
+    if (selectedColor === "amber")
+        penColor = "#ff9900";
+    if (selectedColor === "emerald")
+        penColor = "#50C878";
+    if (selectedColor === "cyan")
+        penColor = "#00FFFF";
 }
 
 function setTool(tool) {

@@ -10,6 +10,7 @@ I made my own wh!teboard app to take notes using vim motions coz couldn't find a
 p -> pen<br>
 e -> eraser<br>
 u -> undo<br>
+n -> change to next color<br>
 
 C-s -> Save as image<br>
 C-c -> Clear wh!teboard<br>

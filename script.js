@@ -4,19 +4,27 @@ const ctx = canvas.getContext("2d");
 let isDrawing = false;
 let currentTool = "pen";
 let penColor = "#3B3B1A"
+
+const colorOrder = ["brown", "currant", "plum", "chartreuse", "emerald", "amber", "cyan"];
+let currentColorIndex = 0;
+
 const undoStack = [];
 
 function saveState() {
     undoStack.push(canvas.toDataURL());
 }
 
-function setColor() {
+function changeColor() {
     var selectedColor = document.getElementById("color-select").value;
+    setColor(selectedColor);
+}
+
+function setColor(selectedColor) {
     if (selectedColor === "brown")
         penColor = "#8a784e";
     if (selectedColor === "currant")
         penColor = "#ad3d3c";
-    if (selectedColor ===  "plum")
+    if (selectedColor === "plum")
         penColor = "#8e4585";
     if (selectedColor === "chartreuse")
         penColor = "#dfff00";
@@ -27,6 +35,14 @@ function setColor() {
     if (selectedColor === "cyan")
         penColor = "#00FFFF";
 }
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "n") {
+        currentColorIndex = (currentColorIndex + 1) % colorOrder.length;
+        const color = colorOrder[currentColorIndex];
+        setColor(color);
+    }
+});
 
 function setTool(tool) {
     currentTool = tool;

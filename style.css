@@ -34,8 +34,8 @@ body{
 
 #toolbar{
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 10px;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
   align-content: start;
   justify-content: center;
   padding: 20px;
@@ -50,7 +50,6 @@ select{
 select,
 ::picker(select) {
   appearance: base-select;
-  color: ;
 }
 
 select:hover{
@@ -78,25 +77,9 @@ option {
   transition: 0.4s;
 }
 
-option:first-of-type {
-  border-radius: 8px 8px 0 0;
-}
-
-option:last-of-type {
-  border-radius: 0 0 8px 8px;
-}
-
-option:not(option:last-of-type) {
-  border-bottom: none;
-}
-
-option:nth-of-type(odd) {
-  background: black;
-}
-
 option:hover,
 option:focus {
-  background: #57043e;
+  background: #632b02;
 }
 
 .button-54 {
